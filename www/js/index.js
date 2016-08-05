@@ -34,12 +34,11 @@ var app = {
     onDeviceReady: function() {	
         var storage = window.localStorage;
 		var ipservidor = storage.getItem("ipservidor");
+		app.receivedEvent('deviceready');
 		if (ipservidor) {
 			window.addEventListener('load', function() { FastClick.attach(document.body); }, false);
 			window.open("http://"+ipservidor+":8082/TotallCheckOut4g/servlet/pos","_self", 'location=no');		 
-		} else {
-			app.receivedEvent('deviceready');
-		}
+		} 
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -50,7 +49,7 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-		receivedElementObj.setAttribute('style', 'display:inline;');
+		receivedElementObj.setAttribute('style', 'visibility:visible');
 
         console.log('Received Event: ' + id);
     }	

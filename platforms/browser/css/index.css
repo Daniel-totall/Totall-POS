@@ -98,7 +98,7 @@ h1 {
 }
 
 .campo.received {
-    display:none;	
+    visibility:hidden;	
 }
 
 
