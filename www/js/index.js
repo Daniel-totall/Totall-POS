@@ -33,16 +33,14 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {	
-        //var inAppBrowserRef = undefined;	
         var storage = window.localStorage;
-		//storage.clear();				
-		app.receivedEvent('deviceready');
 		var ipservidor = storage.getItem("ipservidor");
-		//alert(ipservidor)
 		if (ipservidor) {
 			window.addEventListener('load', function() { FastClick.attach(document.body); }, false);
 			window.open("http://"+ipservidor+":8082/TotallCheckOut4g/servlet/pos","_self", 'location=no');		 
-		}			
+		} else {
+			app.receivedEvent('deviceready');
+		}
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -64,6 +62,4 @@ function setIP() {
 	alert("Endereço "+ipservidor+" incluso com sucesso");
 	window.addEventListener('load', function() { FastClick.attach(document.body); }, false);
 	window.open("http://"+ipservidor+":8082/TotallCheckOut4g/servlet/pos","_self", 'location=no');
-	//var inAppBrowserRef = cordova.InAppBrowser.open("http://"+ipservidor+":8082/TotallCheckOut4g/servlet/pos","_self", 'location=no');
-	//inAppBrowserRef.addEventListener('load', function() { FastClick.attach(document.body); }, false);			 
 }
