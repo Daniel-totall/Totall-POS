@@ -1,0 +1,37 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.totall.pos"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.totall.pos"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.totall.pos"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.totall.pos"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.totall.pos"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.totall.pos"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.totall.pos"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.totall.pos"
+        }
+    }
+}
