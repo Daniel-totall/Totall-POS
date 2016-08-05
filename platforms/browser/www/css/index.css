@@ -97,9 +97,10 @@ h1 {
     display:none;	
 }
 
-.received {
+.campo.received {
     display:none;	
 }
+
 
 @keyframes fade {
     from { opacity: 1.0; }

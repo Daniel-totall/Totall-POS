@@ -17,7 +17,6 @@
  * under the License.
  */
 var app = {
-    // Application Constructor
     initialize: function() {
         this.bindEvents();
     },
@@ -47,9 +46,11 @@ var app = {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
+		var receivedElementObj = parentElement.querySelector('.campo.received');
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
+		receivedElementObj.setAttribute('style', 'display:inline;');
 
         console.log('Received Event: ' + id);
     }	
