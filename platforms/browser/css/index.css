@@ -94,7 +94,11 @@ h1 {
 
 .event.received {
     background-color:#4B946A;
-    display:none;
+    display:none;	
+}
+
+.received {
+    display:none;	
 }
 
 @keyframes fade {
