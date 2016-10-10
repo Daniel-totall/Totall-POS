@@ -37,7 +37,7 @@ var app = {
 		app.receivedEvent('deviceready');
 		if (ipservidor) {
 			window.addEventListener('load', function() { FastClick.attach(document.body); }, false);
-			window.open("http://"+ipservidor+":8082/TotallCheckOut4g/servlet/pos","_self", 'location=no');		 
+			window.open("http://"+ipservidor+":8082/TotallPos/servlet/pos","_self", 'location=no');		 
 		}
     },
     // Update DOM on a Received Event
@@ -61,5 +61,5 @@ function setIP() {
 	storage.setItem("ipservidor", ipservidor);
 	alert("Endereço "+ipservidor+" incluso com sucesso");
 	window.addEventListener('load', function() { FastClick.attach(document.body); }, false);
-	window.open("http://"+ipservidor+":8082/TotallCheckOut4g/servlet/pos","_self", 'location=no');
+	window.open("http://"+ipservidor+":8082/TotallPos/servlet/pos","_self", 'location=no');
 }
